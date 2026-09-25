@@ -1,0 +1,192 @@
+# Pages CMS configuration for The Dubliniensis Lab website
+# Admin panel: https://app.pagescms.org  (open the dubliniensislab/dubliniensislab.github.io repository)
+
+media:
+  - name: images
+    label: Photos and images
+    input: media/images
+    output: media/images
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+  # ---------------------------------------------------------------- PUBLICATIONS
+  - name: publications
+    label: Publications
+    type: file
+    path: content/publications.json
+    format: json
+    list: true
+    fields:
+      - name: doi
+        label: DOI
+        type: string
+        description: "Paste the DOI only (e.g. 10.1099/mic.0.001654) and the website fills in title, authors, year and journal automatically. Don't know the DOI? Search by title at https://dubliniensislab.github.io/paper-finder.html"
+      - name: title
+        label: Title (optional if DOI given)
+        type: string
+        description: Leave empty to use the title from the DOI. Fill in to override it, or for papers without a DOI.
+      - name: authors
+        label: Authors (optional if DOI given)
+        type: text
+        description: "Format: Surname Initials, separated by commas (e.g. Sullivan DJ, Moran GP). Lab members are bolded automatically."
+      - name: year
+        label: Year (optional if DOI given)
+        type: string
+      - name: journal
+        label: Journal (optional if DOI given)
+        type: string
+        description: "e.g. Microbiology 171(3)"
+      - name: topics
+        label: Topics (used by the filter buttons)
+        type: select
+        options:
+          multiple: true
+          values:
+            - value: tlo
+              label: TLO genes
+            - value: candida
+              label: Candida biology
+            - value: microbiome
+              label: Microbiome
+            - value: bacteria
+              label: Bacteria
+      - name: free_link
+        label: Free full-text link (optional)
+        type: string
+        description: e.g. a PubMed Central or open-access link
+
+  # ---------------------------------------------------------------- TEAM
+  - name: team
+    label: Team
+    type: file
+    path: content/team.json
+    format: json
+    fields:
+      - name: groups
+        label: Research groups
+        type: object
+        list: true
+        description: The order here is the order on the website.
+        fields:
+          - { name: name, label: Group leader name, type: string, required: true }
+          - { name: title, label: Title / position, type: string }
+          - { name: focus, label: Research focus (one line), type: string }
+          - { name: photo, label: Photo, type: image, options: { media: images } }
+          - { name: bio, label: Biography, type: rich-text, options: { format: html } }
+          - { name: since, label: In the lab since, type: string }
+          - name: links
+            label: Links (ORCID, Scholar, TCD profile, LinkedIn...)
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: url, label: URL, type: string }
+          - { name: emails, label: Emails, type: string, list: true }
+          - name: members
+            label: Group members
+            type: object
+            list: true
+            description: "Roles containing 'Postdoc' or 'Fellow' get the large photo; others get the small one."
+            fields:
+              - { name: name, label: Name, type: string, required: true }
+              - { name: role, label: Role (e.g. PhD student, Postdoctoral researcher), type: string }
+              - { name: degree, label: Degree line, type: string }
+              - { name: photo, label: Photo, type: image, options: { media: images } }
+              - { name: bio, label: Short description, type: rich-text, options: { format: html } }
+              - { name: since, label: In the lab since, type: string }
+              - name: links
+                label: Links
+                type: object
+                list: true
+                fields:
+                  - { name: label, label: Label, type: string }
+                  - { name: url, label: URL, type: string }
+              - { name: emails, label: Emails, type: string, list: true }
+              - { name: profile, label: Full profile (shown in pop-up, optional), type: rich-text, options: { format: html } }
+      - name: management
+        label: Laboratory management
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: role, label: Role, type: string }
+          - { name: photo, label: Photo, type: image, options: { media: images } }
+          - { name: bio, label: Description, type: rich-text, options: { format: html } }
+          - { name: since, label: In the lab since, type: string }
+          - { name: emails, label: Emails, type: string, list: true }
+      - name: former
+        label: Former leaders and members
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string, required: true }
+          - { name: role, label: Role, type: string }
+          - { name: bio, label: Description, type: rich-text, options: { format: html } }
+          - name: links
+            label: Links
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Label, type: string }
+              - { name: url, label: URL, type: string }
+
+  # ---------------------------------------------------------------- NEWS
+  - name: news
+    label: News
+    type: file
+    path: content/news.json
+    format: json
+    list: true
+    fields:
+      - { name: date, label: Date (e.g. Sep 2026), type: string, required: true }
+      - { name: text, label: News item, type: rich-text, options: { format: html } }
+
+  # ---------------------------------------------------------------- TIMELINE
+  - name: timeline
+    label: Our story (timeline)
+    type: file
+    path: content/timeline.json
+    format: json
+    list: true
+    fields:
+      - { name: year, label: Year, type: string, required: true }
+      - name: category
+        label: Category (dot colour)
+        type: select
+        options:
+          values:
+            - { value: lab, label: The lab }
+            - { value: candida, label: Candida }
+            - { value: tlo, label: TLO genes }
+            - { value: bacteria, label: Bacteria }
+      - { name: title, label: Title, type: string }
+      - { name: text, label: Text, type: rich-text, options: { format: html } }
+      - { name: ref_label, label: Reference label (e.g. Sullivan et al. 1995), type: string }
+      - { name: ref_url, label: Reference link, type: string }
+
+  # ---------------------------------------------------------------- TEACHING
+  - name: teaching
+    label: Teaching
+    type: file
+    path: content/teaching.json
+    format: json
+    list: true
+    fields:
+      - { name: audience, label: Audience (small label), type: string }
+      - { name: title, label: Title, type: string }
+      - { name: text, label: Text, type: rich-text, options: { format: html } }
+      - { name: who, label: Who teaches it, type: string }
+
+  # ---------------------------------------------------------------- SETTINGS
+  - name: settings
+    label: Site settings
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: lab_authors
+        label: Lab author names to bold in publications
+        type: string
+        list: true
+        description: "Exactly as they appear in author lists, e.g. Sullivan DJ. Add each spelling variant."
+      - { name: visits_since, label: Visitor counter start (shown as 'visits since ...'), type: string }
