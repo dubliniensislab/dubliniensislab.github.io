@@ -1,0 +1,83 @@
+[
+  {
+    "year": "1989",
+    "category": "lab",
+    "title": "David Coleman joins the School of Dental Science",
+    "text": "<p>Coleman, a Trinity graduate, joins the School of Dental Science and goes on to lead microbiology research at the Dublin Dental Hospital for more than three decades, later becoming Professor of Oral and Applied Microbiology and Head of the Division of Oral Biosciences.</p>"
+  },
+  {
+    "year": "1991",
+    "category": "lab",
+    "title": "Derek Sullivan joins the lab",
+    "text": "<p>Derek Sullivan joins the microbiology group, beginning a long collaboration with David Coleman on the biology of <i>Candida</i>.</p>"
+  },
+  {
+    "year": "1995",
+    "category": "candida",
+    "title": "A new yeast species is named after Dublin",
+    "text": "<p>Derek Sullivan, David Coleman and colleagues describe <i>Candida dubliniensis</i>, a new species found in the mouths of people with HIV infection. It gives the lab its name.</p>",
+    "ref_label": "Sullivan et al., Microbiology",
+    "ref_url": "https://doi.org/10.1099/13500872-141-7-1507"
+  },
+  {
+    "year": "2005",
+    "category": "candida",
+    "title": "Ten years of <i>C. dubliniensis</i>",
+    "text": "<p>Sullivan, Moran and Coleman review a decade of work showing that, although it is very closely related to <i>C. albicans</i>, <i>C. dubliniensis</i> is less virulent, and that missing or divergent genes may explain the difference.</p>",
+    "ref_label": "Sullivan, Moran & Coleman, FEMS Microbiology Letters",
+    "ref_url": "https://doi.org/10.1016/j.femsle.2005.09.015"
+  },
+  {
+    "year": "2005+",
+    "category": "bacteria",
+    "title": "Cleaner water in the dental clinic",
+    "text": "<p>Coleman's group develops automated systems that use electrochemically activated solutions to control biofilm in dental unit waterlines, work carried into infection control across the dental clinic.</p>"
+  },
+  {
+    "year": "2006+",
+    "category": "bacteria",
+    "title": "Tracking MRSA in Irish hospitals",
+    "text": "<p>The lab builds a long-running programme on the population biology, evolution and antibiotic resistance of MRSA, moving to whole-genome sequencing to follow new clones as they emerge.</p>",
+    "ref_label": "e.g. Earls, Kinnevey et al. 2017, PLoS ONE",
+    "ref_url": "https://doi.org/10.1371/journal.pone.0175542"
+  },
+  {
+    "year": "2014",
+    "category": "tlo",
+    "title": "The <i>TLO</i> genes encode Mediator subunits",
+    "text": "<p>Moran and Sullivan's groups show that the <i>TLO</i> genes of <i>C. albicans</i> encode subunits of Mediator that regulate distinct virulence traits, opening the lab's main line of <i>Candida</i> research today.</p>",
+    "ref_label": "Haran et al., PLoS Genetics"
+  },
+  {
+    "year": "2018",
+    "category": "tlo",
+    "title": "More <i>TLO</i> genes, more virulence",
+    "text": "<p>Expansion of the <i>TLO</i> gene family is shown to enhance the virulence of <i>Candida</i> species.</p>",
+    "ref_label": "Flanagan et al., PLoS ONE",
+    "ref_url": "https://doi.org/10.1371/journal.pone.0200852"
+  },
+  {
+    "year": "2023",
+    "category": "tlo",
+    "title": "The whole <i>TLO</i> family deleted with CRISPR-Cas9",
+    "text": "<p>Removing the whole family reveals different roles for the α, β and γ clades. Follow-up work links the family to antifungal tolerance (2024) and shows that α-<i>TLO</i> genes drive virulence (2026).</p>",
+    "ref_label": "Fletcher et al., PLoS Genetics",
+    "ref_url": "https://doi.org/10.1371/journal.pgen.1011082"
+  },
+  {
+    "year": "2025",
+    "category": "bacteria",
+    "title": "Hidden diversity of vancomycin-resistant enterococci",
+    "text": "<p>Kinnevey, Coleman and colleagues find that 70% of patients studied in an Irish hospital carried more than one lineage of vancomycin-resistant <i>E. faecium</i>.</p>",
+    "ref_label": "Kavanagh, Kinnevey et al., JAC-Antimicrobial Resistance",
+    "ref_url": "https://doi.org/10.1093/jacamr/dlaf065"
+  },
+  {
+    "year": "Today",
+    "category": "lab",
+    "title": "A new generation",
+    "text": "<p>Following David Coleman's retirement, the lab continues as three research groups led by Gary Moran, Derek Sullivan and Peter Kinnevey, working on <i>Candida</i> gene regulation, fungal virulence and antibiotic-resistant bacteria.</p>",
+    "ref_label": "Meet the team",
+    "ref_url": "#team"
+  }
+]

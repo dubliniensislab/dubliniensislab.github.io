@@ -1,0 +1,115 @@
+[
+  {
+    "doi": "10.1099/mic.0.001654",
+    "title": "Depletion of the <i>Candida albicans TLO</i> gene family reveals a requirement for alpha <i>TLO</i> genes for wild-type virulence",
+    "authors": "O'Connor-Moneley J, Lange T, Flanagan PR, Brunke S, Fischer L, Sharma R, Puri S, Hube B, Sullivan DJ, Moran GP",
+    "year": 2026,
+    "journal": "Microbiology 172(1)",
+    "topics": [
+      "tlo",
+      "candida"
+    ],
+    "free_link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13293340/"
+  },
+  {
+    "doi": "10.1099/mic.0.001594",
+    "title": "Fluconazole resistance and <i>CDR1</i> expression in <i>Candida albicans</i> mediated by the hyperactive Tac1-5 transcriptional activator requires Tlo proteins",
+    "authors": "Lim WJ, Lee B, Farrington Z, Abu Alhaija AA, Fleming AB, Sullivan DJ, Moran GP",
+    "year": 2025,
+    "journal": "Microbiology 171(9)",
+    "topics": [
+      "tlo",
+      "candida"
+    ]
+  },
+  {
+    "doi": "10.1093/jacamr/dlaf065",
+    "title": "Co-carriage of diverse vancomycin-resistant <i>Enterococcus faecium</i> ST80-lineages by 70% of patients in an Irish hospital",
+    "authors": "Kavanagh NL, Kinnevey PM, Brennan GI, O'Connell B, Goering RV, Coleman DC",
+    "year": 2025,
+    "journal": "JAC-Antimicrobial Resistance 7(3)",
+    "topics": [
+      "bacteria"
+    ],
+    "free_link": "https://academic.oup.com/jacamr/article/7/3/dlaf065/8121789"
+  },
+  {
+    "doi": "10.1371/journal.pone.0308665",
+    "title": "Deletion of the <i>Candida albicans TLO</i> gene family results in alterations in membrane sterol composition and fluconazole tolerance",
+    "authors": "O'Connor-Moneley J, Fletcher J, et al.",
+    "year": 2024,
+    "journal": "PLoS ONE",
+    "topics": [
+      "tlo",
+      "candida"
+    ],
+    "free_link": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308665"
+  },
+  {
+    "doi": "10.1371/journal.pgen.1011082",
+    "title": "Deletion of the <i>Candida albicans TLO</i> gene family using CRISPR-Cas9 mutagenesis allows characterisation of functional differences in α-, β- and γ-<i>TLO</i> gene function",
+    "authors": "Fletcher J, O'Connor-Moneley J, Frawley D, Flanagan PR, Alaalm L, Menendez-Manjon P, Vega Estevez S, Hendricks S, Woodruff AL, Buscaino A, Anderson MZ, Sullivan DJ, Moran GP",
+    "year": 2023,
+    "journal": "PLoS Genetics",
+    "topics": [
+      "tlo",
+      "candida"
+    ],
+    "free_link": "https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011082"
+  },
+  {
+    "doi": "10.1371/journal.pone.0200852",
+    "title": "Expansion of the <i>TLO</i> gene family enhances the virulence of <i>Candida</i> species",
+    "authors": "Flanagan PR, et al.",
+    "year": 2018,
+    "journal": "PLoS ONE",
+    "topics": [
+      "tlo",
+      "candida"
+    ],
+    "free_link": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200852"
+  },
+  {
+    "doi": "10.3389/fmicb.2018.01558",
+    "title": "Significant enrichment and diversity of the staphylococcal arginine catabolic mobile element ACME in <i>Staphylococcus epidermidis</i> isolates from subgingival peri-implantitis sites and periodontal pockets",
+    "authors": "O'Connor AM, McManus BA, Kinnevey PM, Brennan GI, Fleming TE, Cashin PJ, O'Sullivan M, Polyzois I, Coleman DC",
+    "year": 2018,
+    "journal": "Frontiers in Microbiology",
+    "topics": [
+      "bacteria"
+    ],
+    "free_link": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2018.01558/full"
+  },
+  {
+    "doi": "10.1371/journal.pone.0175542",
+    "title": "The recent emergence in hospitals of multidrug-resistant community-associated sequence type 1 and <i>spa</i> type t127 methicillin-resistant <i>Staphylococcus aureus</i> investigated by whole-genome sequencing: implications for screening",
+    "authors": "Earls MR, Kinnevey PM, Brennan GI, Lazaris A, Skally M, O'Connell B, Humphreys H, Shore AC, Coleman DC",
+    "year": 2017,
+    "journal": "PLoS ONE",
+    "topics": [
+      "bacteria"
+    ],
+    "free_link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5388477/"
+  },
+  {
+    "doi": "10.1155/2012/205921",
+    "title": "<i>Candida albicans</i> versus <i>Candida dubliniensis</i>: why is <i>C. albicans</i> more pathogenic?",
+    "authors": "Moran GP, et al.",
+    "year": 2012,
+    "journal": "International Journal of Microbiology",
+    "topics": [
+      "candida"
+    ],
+    "free_link": "https://doi.org/10.1155/2012/205921"
+  },
+  {
+    "doi": "10.1099/13500872-141-7-1507",
+    "title": "<i>Candida dubliniensis</i> sp. nov.: phenotypic and molecular characterization of a novel species associated with oral candidosis in HIV-infected individuals",
+    "authors": "Sullivan DJ, Westerneng TJ, Haynes KA, Bennett DE, Coleman DC",
+    "year": 1995,
+    "journal": "Microbiology 141(7)",
+    "topics": [
+      "candida"
+    ]
+  }
+]

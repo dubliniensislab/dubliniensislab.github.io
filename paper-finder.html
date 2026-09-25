@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Paper Finder</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F7F9FB;--surface:#FFFFFF;--ink:#161A33;--muted:#4F5670;--line:#DADFEA;--accent:#2A2953;--accent-soft:#DDEFFA;--ok:#1C8574;
+  --serif:'Spectral',Georgia,serif;--sans:'Public Sans','Segoe UI',system-ui,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1022;--surface:#16192F;--ink:#E6E9F5;--muted:#A3A9C4;--line:#2A2F4D;--accent:#8EC8F0;--accent-soft:#1F2B4F;--ok:#4CC2AC;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+.wrap{max-width:860px;margin:0 auto;padding:40px 20px 80px}
+h1{font-family:var(--serif);font-size:36px;margin:0 0 6px}
+.lede{color:var(--muted);margin:0 0 22px;max-width:62ch}
+.tip{background:var(--accent-soft);border-radius:10px;padding:14px 16px;font-size:15px;margin-bottom:24px}
+form{display:flex;gap:10px;flex-wrap:wrap}
+label{font-weight:600;display:block;margin-bottom:6px}
+input{flex:1 1 320px;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);min-height:46px}
+button{font:inherit;font-weight:600;padding:10px 16px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer;min-height:44px}
+@media (prefers-color-scheme:dark){button{color:#0E1022}}
+button.ghost{background:transparent;color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#status{margin:18px 0;color:var(--muted);font-size:15px}
+.res{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px}
+.card h2{font-size:18px;margin:0 0 6px;line-height:1.35}
+.meta{color:var(--muted);font-size:14.5px}
+.fields{display:grid;grid-template-columns:110px minmax(0,1fr) auto;gap:6px 12px;align-items:center;margin-top:14px;font-size:14px}
+.fields dt{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.fields dd{margin:0;overflow-wrap:anywhere}
+.fields button{padding:4px 10px;min-height:32px;font-size:13px;background:transparent;color:var(--accent)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+@media (max-width:560px){.fields{grid-template-columns:1fr auto}.fields dt{grid-column:1 / -1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Paper Finder</h1>
+  <p class="lede">A helper for website admins. Search for a paper by its DOI or its title, then copy the details into the Publications form in Pages CMS.</p>
+  <div class="tip"><b>Quickest way:</b> in Pages CMS you only need to paste the <b>DOI</b>. The website fills in the title, authors, year and journal automatically. Use this page when you don't know the DOI, or want to check the details first.</div>
+  <form id="f">
+    <div style="flex:1 1 100%"><label for="q">DOI or paper title</label></div>
+    <input id="q" name="q" placeholder="e.g. 10.1099/mic.0.001654  or  TLO gene family virulence" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+  <div id="status" role="status"></div>
+  <ul class="res" id="res"></ul>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('f'), q=document.getElementById('q'), st=document.getElementById('status'), res=document.getElementById('res');
+  function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function clean(doi){return String(doi||'').trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i,'').replace(/^doi:\s*/i,'');}
+  function fmt(m){
+    var authors=(m.author||[]).map(function(a){var ini=String(a.given||'').split(/[\s\-.]+/).filter(Boolean).map(function(x){return x[0].toUpperCase();}).join('');return (a.family||a.name||'')+(ini?' '+ini:'');});
+    var parts=(m.issued&&m.issued['date-parts']&&m.issued['date-parts'][0])||[];
+    return {doi:m.DOI||'',title:((m.title||[])[0]||'').replace(/<\/?jats:[^>]*>/g,''),authors:authors.join(', '),year:parts[0]||'',
+      journal:((m['container-title']||[])[0]||'')+(m.volume?' '+m.volume:'')+(m.issue?'('+m.issue+')':'')};
+  }
+  function copy(text,btn){
+    var done=function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1400);};
+    try{navigator.clipboard.writeText(text).then(done,function(){prompt('Copy this:',text);});}catch(e){prompt('Copy this:',text);}
+  }
+  function card(p){
+    var li=document.createElement('li'); li.className='card';
+    var rows=[['doi','DOI'],['title','Title'],['authors','Authors'],['year','Year'],['journal','Journal']];
+    li.innerHTML='<h2>'+esc(p.title||'(no title)')+'</h2><div class="meta">'+esc(p.journal)+(p.year?' · '+esc(p.year):'')+'</div>'+
+      '<dl class="fields">'+rows.map(function(r){return '<dt>'+r[1]+'</dt><dd>'+esc(p[r[0]])+'</dd><button type="button" data-k="'+r[0]+'">Copy</button>';}).join('')+'</dl>'+
+      '<div class="actions"><button type="button" data-k="doi">Copy DOI</button><button type="button" class="ghost" data-all="1">Copy all details</button><a class="ghost" style="align-self:center" href="https://doi.org/'+esc(p.doi)+'" target="_blank" rel="noopener">Open paper ↗</a></div>';
+    li.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+      if(b.dataset.all){copy('DOI: '+p.doi+'\nTitle: '+p.title+'\nAuthors: '+p.authors+'\nYear: '+p.year+'\nJournal: '+p.journal,b);} else copy(String(p[b.dataset.k]||''),b);});
+    return li;
+  }
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); var v=q.value.trim(); if(!v){st.textContent='Type a DOI or a title first.';return;}
+    res.innerHTML=''; st.textContent='Searching…';
+    var doi=clean(v), isDoi=/^10\.\d{4,9}\//.test(doi);
+    var url=isDoi?'https://api.crossref.org/works/'+encodeURIComponent(doi):'https://api.crossref.org/works?rows=8&query.bibliographic='+encodeURIComponent(v);
+    fetch(url).then(function(r){if(!r.ok)throw new Error(r.status===404?'notfound':'http');return r.json();}).then(function(d){
+      var items=isDoi?[d.message]:(d.message.items||[]);
+      if(!items.length){st.textContent='No papers found. Try fewer words from the title, or check the spelling.';return;}
+      st.textContent=isDoi?'Found this paper:':'Top '+items.length+' matches. Pick the right one and copy its DOI:';
+      items.map(fmt).forEach(function(p){res.appendChild(card(p));});
+    }).catch(function(err){
+      st.textContent=err.message==='notfound'?'That DOI was not found. Check it is typed correctly (it starts with 10.).':'The search service could not be reached. Check your internet connection and try again, or enter the paper manually.';
+    });
+  });
+})();
+</script>
+</body>
+</html>
