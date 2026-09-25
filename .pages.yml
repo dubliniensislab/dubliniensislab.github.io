@@ -31,7 +31,7 @@ content:
         description: "Format: Surname Initials, separated by commas (e.g. Sullivan DJ, Moran GP). Lab members are bolded automatically."
       - name: year
         label: Year (optional if DOI given)
-        type: string
+        type: number
       - name: journal
         label: Journal (optional if DOI given)
         type: string
