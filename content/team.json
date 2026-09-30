@@ -102,9 +102,24 @@
           "profile": "<p></p>"
         },
         {
-          "name": "Alison Lee",
-          "role": "PhD Student",
-          "bio": "<p></p>",
+          "name": "Dr. Alison Marie Lee",
+          "role": "ICAT PhD Fellow, Veterinary Anatomic Pathologist",
+          "photo": "media/images/alee_photo.jpg",
+          "bio": "<p>My PhD project examines whether oral bacteria in cats (which cause periodontal disease) may also be involved in the development of feline oral cancer. I am also examining whether Toll-like receptors, which detect bacteria, are present on cancer cells and may affect how cells grow and behave. I am using techniques including digital image analysis, fluorescent&nbsp;in-situ hybridisation, cell culture, ELISA and RT-PCR as part of my project. I am also working on the development of a chicken chorioallantoic&nbsp;membrane (CAM) model of feline oral cancer. I work between the DDUH Microbiology Lab and the UCD School of Veterinary Medicine.</p>",
+          "since": "2023",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in/alison-lee-b52b84115/ "
+            },
+            {
+              "label": "ORCID",
+              "url": "https://orcid.org/my-orcid?orcid=0000-0002-2224-5549"
+            }
+          ],
+          "emails": [
+            "alee2@tcd.ie"
+          ],
           "profile": "<p></p>"
         },
         {
