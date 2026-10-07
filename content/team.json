@@ -192,6 +192,28 @@
             "emoore3@tcd.ie"
           ],
           "profile": "<p></p>"
+        },
+        {
+          "name": "Perpetual Melanie Dcunha ",
+          "role": "PhD student- Microbiologist ",
+          "photo": "media/images/WhatsApp Image 2026-10-06 at 3.52.10 PM.jpeg",
+          "bio": "<p>My PhD project investigates the diversity, transmission and antimicrobial resistance of Enterococcus faecium in Ireland. Using culture, short- and long-read genome sequencing, and comparative genomic analysis, the research explores variation within individual hosts, the spread of resistance genes, and connections between human and veterinary populations. A key focus is determining whether testing a single bacterial colony can miss important diversity within E. faecium carriage, and whether approaches such as multiplex PCR can improve detection of mixed populations. The project aims to strengthen surveillance, laboratory detection and infection prevention, while incorporating patient and public perspectives throughout the research.</p>",
+          "since": "2026",
+          "links": [
+            {
+              "label": "Linkdin",
+              "url": "www.linkedin.com/in/perpetual-melanie-dcunha-267b2119b"
+            },
+            {
+              "label": "Orcid",
+              "url": "https://orcid.org/0009-0001-1143-7289"
+            }
+          ],
+          "emails": [
+            "Melanie.Dcunha@dental.tcd.ie ",
+            "dcunhap@tcd.ie "
+          ],
+          "profile": "<p><a href=\"http://B.Sc\">B.Sc</a>. Microbiology and Biochemistry, St Xavier's College, University of Mumbai (2024)&nbsp;</p><p><a href=\"http://M.Sc\">M.Sc</a>. Healthcare Infection (Clinical Microbiology), Trinity College, Dublin (2025)&nbsp;</p>"
         }
       ]
     }
