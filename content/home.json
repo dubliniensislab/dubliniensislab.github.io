@@ -2,23 +2,21 @@
   "hero": {
     "eyebrow": "School of Dental Science · Trinity College Dublin",
     "title": "How pathogens cause disease and resist treatment",
-    "intro": "<p>We are a microbiology research group at the Dublin Dental University Hospital. We study the fungal pathogen <i>Candida albicans</i>, the bacteria of the oral microbiome and antibiotic-resistant hospital pathogens: how they cause infection, what drives their virulence, and how they resist antimicrobial drugs.</p>",
-    "origin": "<p>Our name comes from <i>Candida dubliniensis</i>, the yeast species first described in this laboratory in 1995.</p>",
-    "photo": "",
-    "photo_alt": "",
-    "photo_caption": ""
+    "intro": "<p>We are a microbiology research group at the Dublin Dental University Hospital. We study the fungal pathogen <em>Candida albicans</em>, the bacteria of the oral microbiome and antibiotic-resistant hospital pathogens: how they cause infection, what drives their virulence, and how they resist antimicrobial drugs.</p>",
+    "origin": "<p>Our name comes from <em>Candida dubliniensis</em>, the yeast species first described in this laboratory in 1995.</p>",
+    "photo": "media/images/WhatsApp Image 2026-10-13 at 11.18.19.jpeg"
   },
   "themes": [
     {
       "area": "Gene regulation",
       "title": "The <i>TLO</i> gene family and Mediator",
-      "text": "<p>How an expanded family of Mediator subunit genes shapes metabolism, stress responses, filamentation and virulence in <i>C. albicans</i>.</p>",
+      "text": "<p>How an expanded family of Mediator subunit genes shapes metabolism, stress responses, filamentation and virulence in <em>C. albicans</em>.</p>",
       "led_by": "Derek Sullivan & Gary Moran"
     },
     {
       "area": "Oral microbiome",
       "title": "Oral microbes and disease",
-      "text": "<p>How oral microorganisms such as <i>Candida albicans</i> and <i>Fusobacterium nucleatum</i> cause disease, studied with genetics, genomics and metagenomics.</p>",
+      "text": "<p>How oral microorganisms such as <em>Candida albicans</em> and <em>Fusobacterium nucleatum</em> cause disease, studied with genetics, genomics and metagenomics.</p>",
       "led_by": "Gary Moran"
     },
     {
