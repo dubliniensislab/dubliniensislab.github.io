@@ -140,6 +140,15 @@ content:
     fields:
       - { name: date, label: Date (e.g. Sep 2026), type: string, required: true }
       - { name: text, label: News item, type: rich-text, options: { format: html } }
+      - name: doi
+        label: Paper DOI (optional)
+        type: string
+        description: "If this news is about a paper, paste its DOI and a 'Read the paper' button appears. Find a DOI at https://dubliniensislab.github.io/paper-finder.html"
+      - name: link
+        label: Other link (optional)
+        type: string
+        description: "Any other web address, e.g. a conference or press page. To link to a page on this site use e.g. #publications"
+      - { name: link_label, label: Button text for the other link (optional), type: string, description: "Defaults to 'Read more'" }
 
   # ---------------------------------------------------------------- TIMELINE
   - name: timeline
@@ -176,6 +185,59 @@ content:
       - { name: title, label: Title, type: string }
       - { name: text, label: Text, type: rich-text, options: { format: html } }
       - { name: who, label: Who teaches it, type: string }
+
+  # ---------------------------------------------------------------- HOME PAGE
+  - name: home
+    label: Home page
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: hero
+        label: Top of the home page
+        type: object
+        fields:
+          - { name: eyebrow, label: Small line above the title, type: string }
+          - { name: title, label: Main title, type: string }
+          - { name: intro, label: Introduction paragraph, type: rich-text, options: { format: html } }
+          - { name: origin, label: Name origin line (a 'Read our story' link is added automatically), type: rich-text, options: { format: html } }
+          - name: photo
+            label: Lab photo (optional)
+            type: image
+            description: "Upload a group photo to show it next to the title. A landscape photo works best. Leave empty to show the agar-plate illustration."
+            options: { media: images }
+          - { name: photo_alt, label: Photo description for screen readers, type: string, description: "e.g. Members of The Dubliniensis Lab outside the Dublin Dental University Hospital" }
+          - { name: photo_caption, label: Photo caption (optional), type: string }
+      - name: themes
+        label: "'What we work on' cards"
+        type: object
+        list: true
+        description: One card per research theme, in this order. Use <i>...</i> in titles for italic species or gene names.
+        fields:
+          - { name: area, label: Small label (e.g. Oral microbiome), type: string }
+          - { name: title, label: Card title, type: string }
+          - { name: text, label: Short description, type: rich-text, options: { format: html } }
+          - { name: led_by, label: Led by, type: string }
+
+  # ---------------------------------------------------------------- RESEARCH PAGE
+  - name: research
+    label: Research page (group themes)
+    type: file
+    path: content/research.json
+    format: json
+    fields:
+      - name: themes
+        label: Research themes
+        type: object
+        list: true
+        description: "These appear on the Research page below the TLO section (which has its own diagram and stays as it is)."
+        fields:
+          - { name: area, label: Small label (e.g. Staphylococci), type: string }
+          - { name: title, label: Title, type: string, description: "Use <i>...</i> for italic species or gene names." }
+          - { name: led_by, label: Led by, type: string }
+          - { name: group_name, label: Group name (optional), type: string }
+          - { name: body, label: Description, type: rich-text, options: { format: html } }
+          - { name: anchor, label: Short web name (optional), type: string, description: "Used in links like #research. Leave as it is for existing themes." }
 
   # ---------------------------------------------------------------- SETTINGS
   - name: settings
