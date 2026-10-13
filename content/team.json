@@ -98,7 +98,15 @@
         {
           "name": "Linda Smith",
           "role": "Postdoctoral Researcher",
-          "bio": "<p></p>",
+          "degree": "PhD in Genomics Data Science (2026)",
+          "bio": "<p>I have expertise in microbiome and metagenomic analysis, large-scale biological data processing, and machine learning based classification. Experienced in developing computational pipelines, training predictive models, and extracting biological insight from high-dimensional datasets.</p>",
+          "since": "July 2026",
+          "links": [
+            {
+              "label": "eternalmicrobe.com",
+              "url": "eternalmicrobe.com"
+            }
+          ],
           "profile": "<p></p>"
         },
         {
@@ -125,13 +133,22 @@
         {
           "name": "Jamie Knox-MacCleod",
           "role": "PhD Student",
-          "bio": "<p></p>",
+          "bio": "<p>Working on the DAFM funded project SWEETWISE to examine the cariogenicity of modified food formulations using in vitro models. Supervised by Prof. Mick Crowe and Prof. Gary Moran.</p>",
+          "since": "March 2026",
           "profile": "<p></p>"
         },
         {
           "name": "Ramsha Ahmad",
           "role": "PhD Student",
-          "bio": "<p></p>",
+          "degree": "MSc Molecular biology, Microbiology & Biotechnology (Lund University)",
+          "bio": "<p>Microbiology researcher with experience in cancer microbiome analysis, metagenomics, and microbial culture. Skilled in strain- level profiling and microbial metabolite assessment to explore microbial roles in carcinogenesis.</p>",
+          "since": "September 2025",
+          "links": [
+            {
+              "label": "LinkedIn",
+              "url": "https://www.linkedin.com/in /ramsha-ahmad- 66ba5b196/"
+            }
+          ],
           "profile": "<p></p>"
         },
         {
