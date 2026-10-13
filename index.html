@@ -85,6 +85,9 @@ main{padding-block:0 0}
 .plate{position:relative; aspect-ratio:1; max-width:100%; width:100%; max-width:520px; justify-self:center}
 .plate canvas{width:100%; height:100%; display:block}
 .plate figcaption{position:absolute; left:0; right:0; bottom:-30px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--muted)}
+.hero-photo{margin:0; width:100%; justify-self:center}
+.hero-photo img{display:block; width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:14px; border:1px solid var(--line); background:var(--surface)}
+.hero-photo figcaption{margin-top:10px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--muted)}
 @media (max-width:860px){ .hero{grid-template-columns:1fr; gap:48px; padding-block:40px 64px} .plate{max-width:380px} }
 
 .facts{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-top:24px}
@@ -250,6 +253,9 @@ main{padding-block:0 0}
 .pub .m{font-family:var(--mono); font-size:13px; margin-top:8px; overflow-wrap:anywhere; display:flex; flex-wrap:wrap; gap:6px 16px; align-items:center}
 .pub .read{font-family:var(--sans); font-weight:600; font-size:13.5px; text-decoration:none; background:var(--accent-soft); color:var(--ink); padding:3px 10px; border-radius:999px}
 .pub .read:hover{background:var(--accent); color:var(--accent-ink)}
+.news-links{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+.news-link{font-weight:600; font-size:13.5px; text-decoration:none; background:var(--accent-soft); color:var(--ink); padding:3px 10px; border-radius:999px}
+.news-link:hover{background:var(--accent); color:var(--accent-ink)}
 .fulllists{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-bottom:40px}
 .fulllists a{display:flex; flex-direction:column; gap:4px; padding:18px 20px; border:1px solid var(--line); border-radius:10px; background:var(--surface); text-decoration:none; color:var(--ink)}
 .fulllists a:hover{border-color:var(--accent)}
@@ -361,17 +367,18 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
   <div class="wrap">
     <div class="hero">
       <div class="hero-copy">
-        <div class="eyebrow">School of Dental Science · Trinity College Dublin</div>
+        <div class="eyebrow" id="heroEyebrow">School of Dental Science · Trinity College Dublin</div>
         <div class="ga-line" lang="ga">Saotharlann Dubliniensis</div>
-        <h1>How pathogens cause disease and resist treatment</h1>
-        <p class="lede">We are a microbiology research group at the Dublin Dental University Hospital. We study the fungal pathogen <i>Candida albicans</i>, the bacteria of the oral microbiome and antibiotic-resistant hospital pathogens: how they cause infection, what drives their virulence, and how they resist antimicrobial drugs.</p>
-        <p class="origin">Our name comes from <i>Candida dubliniensis</i>, the yeast species first described in this laboratory in 1995. <a href="#story" data-link style="font-style:normal; font-family:var(--sans); font-size:15px">Read our story →</a></p>
+        <h1 id="heroTitle">How pathogens cause disease and resist treatment</h1>
+        <p class="lede" id="heroIntro">We are a microbiology research group at the Dublin Dental University Hospital. We study the fungal pathogen <i>Candida albicans</i>, the bacteria of the oral microbiome and antibiotic-resistant hospital pathogens: how they cause infection, what drives their virulence, and how they resist antimicrobial drugs.</p>
+        <p class="origin" id="heroOrigin">Our name comes from <i>Candida dubliniensis</i>, the yeast species first described in this laboratory in 1995. <a href="#story" data-link style="font-style:normal; font-family:var(--sans); font-size:15px">Read our story →</a></p>
         <div class="btns">
           <a class="btn primary" href="#research" data-link>Explore our research</a>
           <a class="btn ghost" href="#collaborate" data-link>Collaborate with us</a>
         </div>
       </div>
-      <figure class="plate" style="margin:0">
+      <figure class="hero-photo" id="heroPhoto" hidden><img id="heroImg" alt=""><figcaption id="heroCap"></figcaption></figure>
+      <figure class="plate" id="heroPlate" style="margin:0">
         <canvas id="plate" width="1040" height="1040" role="img" aria-label="Illustration of Candida colonies growing on an agar plate"></canvas>
         <figcaption>Illustration: <i>Candida</i> colonies on agar</figcaption>
       </figure>
@@ -388,7 +395,7 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
   <div class="section">
     <div class="wrap">
       <div class="section-head"><h2>What we work on</h2><a href="#research" data-link>All research →</a></div>
-      <div class="themes">
+      <div class="themes" id="homeThemes">
         <article class="theme">
           <div class="eyebrow">Gene regulation</div>
           <h3>The <i>TLO</i> gene family and Mediator</h3>
@@ -540,6 +547,7 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
           </a>
         </div>
       </article>
+      <div id="researchThemes">
       <article class="rtheme" id="microbiome">
         <aside><div class="eyebrow">Oral microbiome</div><div class="led">Led by <b>Gary Moran</b></div><div class="led">Oral Microbiome research group</div></aside>
         <div class="body">
@@ -557,6 +565,7 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
           <p>We also characterise the mobile genetic elements that staphylococci use to spread resistance and adapt to new niches, including the arginine catabolic mobile element (ACME) in <i>Staphylococcus epidermidis</i> from periodontal and peri-implant disease.</p>
         </div>
       </article>
+      </div>
     </div>
 
     <div class="section" id="teaching" style="padding-block:72px 0">
@@ -592,6 +601,7 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
       <div class="eyebrow">Publications <span class="ga" lang="ga">· Foilseacháin</span></div>
       <h1>Selected publications</h1>
       <p>Key papers from the lab, with links to read them. Lab members are shown in bold. For every paper, use the full lists below.</p>
+      <p style="margin-top:10px"><a href="paper-finder.html" style="font-weight:600">Looking for a specific paper? Search by title, author or DOI with our Paper Finder →</a></p>
     </div>
     <h2 style="font-size:24px; margin-bottom:16px">Full publication lists</h2>
     <div class="fulllists">
@@ -695,7 +705,7 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
     <div style="display:flex; flex-direction:column; gap:16px"><div class="logos"><a class="logo-tile" href="https://www.tcd.ie/dental/"><img src="media/images/tcd-logo.png" alt="Trinity College Dublin"></a><a class="logo-tile" href="https://www.dentalhospital.ie/"><img src="media/images/dduh-logo.png" alt="Dublin Dental University Hospital"></a></div><div><b>The Dubliniensis Lab</b><br>Microbiology Research Unit, School of Dental Science, Trinity College Dublin<br>Dublin Dental University Hospital, Lincoln Place, Dublin 2</div><div id="visits" class="visits" hidden></div></div>
     <div style="display:flex; flex-direction:column; gap:4px">
       <a href="#research" data-link>Research</a><a href="#learn" data-link><i>Candida</i> explained</a><a href="#team" data-link>Team</a><a href="#publications" data-link>Publications</a><a href="#collaborate" data-link>Work with us</a>
-      <a href="paper-finder.html" style="margin-top:10px; font-size:13px; opacity:.75">Paper Finder (admins)</a>
+      <a href="paper-finder.html">Paper Finder</a>
     </div>
   </div>
 </footer>
@@ -799,7 +809,11 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
   }
 
   /* ---------- news, timeline, teaching ---------- */
-  function newsLI(n){ return '<li><div class="d">'+esc(n.date||"")+'</div><div class="x">'+(n.text||"")+'</div></li>'; }
+  function newsLI(n){
+    var d=String(n.doi||"").trim().replace(/^https?:\/\/(dx\.)?doi\.org\//i,"").replace(/^doi:\s*/i,"");
+    var links=(d?'<a class="news-link" href="https://doi.org/'+esc(d)+'" target="_blank" rel="noopener">Read the paper ↗</a>':'')+
+      (n.link?'<a class="news-link" href="'+esc(n.link)+'"'+(/^#/.test(n.link)?' data-link':' target="_blank" rel="noopener"')+'>'+esc(n.link_label||"Read more")+(/^#/.test(n.link)?' →':' ↗')+'</a>':'');
+    return '<li><div class="d">'+esc(n.date||"")+'</div><div class="x">'+(n.text||"")+(links?'<div class="news-links">'+links+'</div>':'')+'</div></li>'; }
   function renderNews(list){ $("newsAll").innerHTML=list.map(newsLI).join(""); $("newsHome").innerHTML=list.slice(0,2).map(newsLI).join(""); }
   var dotClass={lab:"lab",candida:"",tlo:"tlo",bacteria:"bac"};
   function renderTimeline(list){
@@ -814,13 +828,43 @@ footer{border-top:1px solid var(--line); padding-block:40px; background:var(--su
     }).join("");
   }
 
-  Promise.all(["settings","team","publications","news","timeline","teaching"].map(function(n){ return load(n).catch(function(){ return null; }); })).then(function(r){
+  function renderHome(h){
+    var hero=h.hero||{};
+    if(hero.eyebrow) $("heroEyebrow").textContent=hero.eyebrow;
+    if(hero.title) $("heroTitle").innerHTML=hero.title;
+    if(hero.intro) $("heroIntro").innerHTML=String(hero.intro).replace(/^\s*<p>|<\/p>\s*$/g,"");
+    if(hero.origin) $("heroOrigin").innerHTML=String(hero.origin).replace(/^\s*<p>|<\/p>\s*$/g,"")+' <a href="#story" data-link style="font-style:normal; font-family:var(--sans); font-size:15px">Read our story →</a>';
+    if(hero.photo){
+      var img=$("heroImg"); img.src=hero.photo.replace(/^\//,""); img.alt=hero.photo_alt||"The Dubliniensis Lab team";
+      $("heroCap").textContent=hero.photo_caption||""; $("heroCap").hidden=!hero.photo_caption;
+      $("heroPhoto").hidden=false; $("heroPlate").hidden=true;
+    }
+    if(h.themes&&h.themes.length){
+      $("homeThemes").innerHTML=h.themes.map(function(t){
+        return '<article class="theme"><div class="eyebrow">'+esc(t.area||"")+'</div><h3>'+(t.title||"")+'</h3>'+(/^\s*</.test(t.text||"")?t.text:'<p>'+(t.text||"")+'</p>')+
+          (t.led_by?'<div class="lead"><b>Led by</b> '+esc(t.led_by)+'</div>':'')+'</article>';
+      }).join("");
+    }
+  }
+  function renderResearch(r){
+    if(!r.themes||!r.themes.length) return;
+    $("researchThemes").innerHTML=r.themes.map(function(t){
+      var id=String(t.anchor||t.title||"").toLowerCase().replace(/<[^>]+>/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+      return '<article class="rtheme" id="'+esc(id)+'"><aside><div class="eyebrow">'+esc(t.area||"")+'</div>'+
+        (t.led_by?'<div class="led">Led by <b>'+esc(t.led_by)+'</b></div>':'')+(t.group_name?'<div class="led">'+esc(t.group_name)+'</div>':'')+
+        '</aside><div class="body"><h2>'+(t.title||"")+'</h2>'+(t.body||"")+'</div></article>';
+    }).join("");
+  }
+
+  Promise.all(["settings","team","publications","news","timeline","teaching","home","research"].map(function(n){ return load(n).catch(function(){ return null; }); })).then(function(r){
     var st=r[0]||{}; labAuthors=st.lab_authors||[]; window.__visitsSince=st.visits_since||"";
     if(r[1]) renderTeam(r[1]);
     if(r[2]) loadPubs(r[2]);
     if(r[3]) renderNews(r[3]);
     if(r[4]) renderTimeline(r[4]);
     if(r[5]) renderTeaching(r[5]);
+    if(r[6]) renderHome(r[6]);
+    if(r[7]) renderResearch(r[7]);
     if(r.some(function(x){return x===null;})) console.warn("Some content files could not be loaded.");
   });
 

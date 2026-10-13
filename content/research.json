@@ -1,0 +1,20 @@
+{
+  "themes": [
+    {
+      "anchor": "microbiome",
+      "area": "Oral microbiome",
+      "led_by": "Gary Moran",
+      "group_name": "Oral Microbiome research group",
+      "title": "Oral microbes and disease",
+      "body": "<p>The mouth is home to hundreds of species of bacteria and fungi. Most live there harmlessly, but some can cause disease when the balance of this community changes. The Oral Microbiome group studies the pathogenicity of oral microorganisms, including the fungal pathogen <i>Candida albicans</i> and the oral bacterium <i>Fusobacterium nucleatum</i>.</p><p>We combine molecular genetics, genomics and transcriptomics to find out how these organisms adapt to the host and cause disease: for <i>C. albicans</i>, how it switches between yeast and filamentous forms, responds to stress and invades tissue. We also carry out metagenomics of the oral microbiome, sequencing the whole microbial community in patient samples, to better understand oral disease.</p><p>Earlier comparative work with <i>C. dubliniensis</i>, a close relative that much less often causes disease, helped identify traits that make <i>C. albicans</i> more pathogenic.</p>"
+    },
+    {
+      "anchor": "staph",
+      "area": "Staphylococci",
+      "led_by": "Peter Kinnevey",
+      "group_name": "",
+      "title": "Staphylococcal genomics and resistance",
+      "body": "<p>Using whole-genome sequencing, we track the emergence of multidrug-resistant methicillin-resistant <i>Staphylococcus aureus</i> (MRSA) in Irish hospitals, which informs how patients are screened.</p><p>We also characterise the mobile genetic elements that staphylococci use to spread resistance and adapt to new niches, including the arginine catabolic mobile element (ACME) in <i>Staphylococcus epidermidis</i> from periodontal and peri-implant disease.</p>"
+    }
+  ]
+}
