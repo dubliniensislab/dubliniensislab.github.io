@@ -156,5 +156,18 @@
       "microbiome",
       "bacteria"
     ]
-  }
+  },
+  {
+    "doi": "10.1093/femsmc/xtag002",
+    "title": "The role of Fusobacterium nucleatum in the tumour microenvironment and carcinogenesis of oral and colonic malignancies",
+    "authors": "Elisabetha Larionova , Gary P Moran",
+    "year": 2026,
+    "journal": "FEMS Microbes",
+    "topics": [
+      "bacteria",
+      "microbiome"
+    ],
+    "free_link": "https://academic.oup.com/femsmicrobes/article/doi/10.1093/femsmc/xtag002/8419685"
+  },
+  {}
 ]
