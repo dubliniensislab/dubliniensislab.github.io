@@ -169,5 +169,37 @@
     ],
     "free_link": "https://academic.oup.com/femsmicrobes/article/doi/10.1093/femsmc/xtag002/8419685"
   },
-  {}
+  {
+    "doi": "10.1080/20002297.2023.2263971",
+    "title": "Smoking, tooth loss and oral hygiene practices have significant and site-specific impacts on the microbiome of oral mucosal surfaces: a cross-sectional study",
+    "authors": "Sheila Galvin,Sviatlana Anishchuk, Claire M. Healy & Gary P. Moran",
+    "year": 2023,
+    "journal": "Journal of Oral Microbiology",
+    "topics": [
+      "microbiome"
+    ],
+    "free_link": "https://www.tandfonline.com/doi/full/10.1080/20002297.2023.2263971#abstract"
+  },
+  {
+    "doi": "10.1093/ecco-jcc/jjad003",
+    "title": "The Oral Microbiome in Treatment-Naïve Paediatric IBD Patients Exhibits Dysbiosis Related to Disease Severity that Resolves Following Therapy",
+    "authors": "Khalid Elmaghrawy , Paddy Fleming , Kirsten Fitzgerald , Sarah Cooper , Anna Dominik , Séamus Hussey , Gary P Moran\n",
+    "year": 2023,
+    "journal": "Journal of Crohn's and Colitis",
+    "topics": [
+      "microbiome"
+    ],
+    "free_link": "https://academic.oup.com/ecco-jcc/article/17/4/553/6761098"
+  },
+  {
+    "doi": "10.1111/jcpe.13819",
+    "title": "Subgingival microbial diversity and respiratory decline: A cross-sectional study",
+    "authors": "Lewis Winning, Gary Moran, Mary McClory, Ikhlas El Karim, Fionnuala T. Lundy, Christopher C. Patterson, Dermot Linden, Kathy M. Cullen, Frank Kee, Gerard J. Linden",
+    "year": 2023,
+    "journal": "Journal of Clinical Periodontolog",
+    "topics": [
+      "microbiome"
+    ],
+    "free_link": "https://onlinelibrary.wiley.com/doi/full/10.1111/jcpe.13819"
+  }
 ]
