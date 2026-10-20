@@ -139,15 +139,19 @@
         },
         {
           "name": "Ramsha Ahmad",
-          "role": "PhD Student",
+          "role": "PhD Candidate ",
           "degree": "MSc Molecular biology, Microbiology & Biotechnology (Lund University)",
-          "bio": "<p>Microbiology researcher with experience in cancer microbiome analysis, metagenomics, and microbial culture. Skilled in strain- level profiling and microbial metabolite assessment to explore microbial roles in carcinogenesis.</p>",
+          "photo": "media/images/Ramsha_image.png",
+          "bio": "<p>My research focuses on investigating the role of oral microbiome and its&nbsp;metabolite (Acetaldehyde) in oral potentially malignant disorders (OPMDs). My aim is to identify microbial&nbsp;biomarkers and to explore the link between OPMDs and progression towards Oral cancer using strain level metagenomics and metabolomics (SIFT-MS)</p>",
           "since": "September 2025",
           "links": [
             {
               "label": "LinkedIn",
               "url": "https://www.linkedin.com/in /ramsha-ahmad- 66ba5b196/"
             }
+          ],
+          "emails": [
+            "raahmad@tcd.ie"
           ],
           "profile": "<p></p>"
         },
