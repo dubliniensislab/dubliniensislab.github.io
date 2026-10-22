@@ -1,5 +1,9 @@
 [
   {
+    "date": "Oct 29th 2026",
+    "text": "<p>Congratulations to <strong>Ailbhe McNamara</strong>, a final-year BSc Biomedical &amp; Molecular Diagnostics student at TU Dublin, who carried out her undergraduate thesis project in our lab. Her project, <em>“Development of a Multiplex PCR Assay Targeting Virulence and Mobile Genetic Element-Associated Markers in Enterococcus faecium”</em>, was supervised by Dr Peter Kinnevey and Emma Moore, with support from Dr Abed Alkarem Abu Al Haija.</p><p>Ailbhe has been awarded the medal for <strong>Highest Achieving Final Year Student 2025–26</strong> and the <strong>Deciphex Medal for Best Overall Project 2025–26</strong>. Well done, Ailbhe! 🎉</p>"
+  },
+  {
     "date": "2026",
     "text": "<p>New paper in <em>Microbiology</em>: a single α-<em>TLO</em> gene is enough to restore full virulence to <em>C. albicans</em> strains depleted of the <em>TLO</em> family.</p>"
   },
@@ -10,9 +14,5 @@
   {
     "date": "2023",
     "text": "<p>New paper in <em>PLoS Genetics</em>: CRISPR-Cas9 deletion of the whole <em>TLO</em> family reveals distinct roles for the α, β and γ clades.</p>"
-  },
-  {
-    "date": "Oct 29th 2026",
-    "text": "<p>Congratulations to <strong>Ailbhe McNamara</strong>, a final-year BSc Biomedical &amp; Molecular Diagnostics student at TU Dublin, who carried out her undergraduate thesis project in our lab. Her project, <em>“Development of a Multiplex PCR Assay Targeting Virulence and Mobile Genetic Element-Associated Markers in Enterococcus faecium”</em>, was supervised by Dr Peter Kinnevey and Emma Moore, with support from Dr Abed Alkarem Abu Al Haija.</p><p>Ailbhe has been awarded the medal for <strong>Highest Achieving Final Year Student 2025–26</strong> and the <strong>Deciphex Medal for Best Overall Project 2025–26</strong>. Well done, Ailbhe! 🎉</p>"
   }
 ]
