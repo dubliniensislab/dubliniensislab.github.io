@@ -131,10 +131,20 @@
           "profile": "<p></p>"
         },
         {
-          "name": "Jamie Knox-MacCleod",
+          "name": "Jaime Knox Macleod ",
           "role": "PhD Student",
-          "bio": "<p>Working on the DAFM funded project SWEETWISE to examine the cariogenicity of modified food formulations using in vitro models. Supervised by Prof. Mick Crowe and Prof. Gary Moran.</p>",
+          "photo": "media/images/adad.png",
+          "bio": "<p>Working on the DAFM-funded SWEETWISE project,&nbsp;developing an in vitro model to assess the cariogenic and erosive effects of modified complementary food for children under 36 months. Supervised by Prof. Mick Crowe and Prof. Gary Moran.</p>",
           "since": "March 2026",
+          "links": [
+            {
+              "label": "Linkedin",
+              "url": "www.linkedin.com/in/jaime-knox-macleod-4ba18b21b"
+            }
+          ],
+          "emails": [
+            "jamie.knox-maccleod@dental.tcd.ie "
+          ],
           "profile": "<p></p>"
         },
         {
